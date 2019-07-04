@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrange the number</title>
+</head>
+<body>
+<script>
+    let num = prompt("Enter the total number you want");
+    let numArr = [];
+    let numInput;
+
+    for (let i = 1; i <= num; i++) {
+        numInput = Number(prompt("Enter number"));
+        numArr.push(numInput);
+    }
+
+    function arrange(num) {
+        let temp;
+        for (let i = 0; i <num.length-1; i++)
+            for (let j = i + 1; j < num.length; j++) {
+                if (num[i] > num[j]) {
+
+                    temp = num[i];
+                    num[i] = num[j];
+                    num[j] = temp;
+                }
+            }
+        console.log(num);
+    }
+    arrange(numArr);
+
+</script>
+</body>
+</html>

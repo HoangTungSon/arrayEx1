@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array in array</title>
+</head>
+<body>
+<script>
+    let numArr1 = [];
+    let numArr2 = [];
+    let numArr3 = new Array(20);
+    let numInput;
+
+    for (let i = 0; i < 10; i++) {
+        numInput = Number(prompt("Enter number for array1"));
+        numArr1.push(numInput);
+    }
+    console.log(numArr1);
+
+    for (let i = 0; i < 10; i++) {
+        numInput = Number(prompt("Enter number for array2"));
+        numArr2.push(numInput);
+    }
+    console.log(numArr1);
+
+    for (i = 0; i < 10; i++) {
+        numArr3[i] = numArr1[i];
+    }
+    for (i=10; i<20; i++){
+        numArr3[i] = numArr2[i-10];
+    }
+    console.log(numArr3);
+</script>
+</body>
+</html>

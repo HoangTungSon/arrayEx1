@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max and average</title>
+</head>
+<body>
+<script>
+
+    let num = Number(prompt("Enter the total number we want"));
+    let numArr = [];
+    let numInput;
+
+    for (let i = 1; i <= num; i++) {
+        numInput = Number(prompt("Enter the number"));
+        numArr.push(numInput);
+    }
+    
+    function maxNum() {
+        let max = numArr[0];
+        let index = 0;
+
+        for (i = 0; i < numArr.length; i++) {
+            if (max < numArr[i]) {
+                max = numArr[i];
+                index = i;
+            }
+        }
+
+        document.write("the max value is " + max + " at position: " + index);
+    }
+    
+    function average() {
+        let total = 0;
+        for(let i=0; i<numArr.length;i++){
+            total += numArr[i];
+        }
+
+        let ave = total/(numArr.length)
+        document.write("the average of array = " + ave);
+    }
+
+    maxNum();
+    document.write("</br>");
+    average();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number that higher than 10</title>
+</head>
+<body>
+<script>
+        let num = Number(prompt("Enter the total number we want"));
+        let numArr = [];
+        let numInput;
+
+        for (let i = 1; i <= num; i++) {
+            numInput = Number(prompt("Enter the number"));
+            numArr.push(numInput);
+        }
+
+    function count10() {
+        let count = 0;
+        for (let j = 0; j < numArr.length; j++) {
+            if (numArr[j] > 10) {
+                count += 1;
+            }
+        }
+
+        document.write("so so nguyen lon hon 10 la = " + count);
+    }
+
+    count10();
+
+</script>
+</body>
+</html>

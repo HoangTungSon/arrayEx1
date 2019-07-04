@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forgo the number</title>
+</head>
+<body>
+<script>
+    let num = prompt("Enter the total number you want");
+    let numArr = [];
+    let numInput;
+
+    for (let i = 1; i <= num; i++) {
+        numInput = Number(prompt("Enter number"));
+        numArr.push(numInput);
+    }
+    console.log(numArr);
+    let name = prompt("Enter number");
+
+    function checkErase(name) {
+        for(let i=0; i<numArr.length; i++){
+            if(name = numArr[i]){
+                numArr[i] = numArr[i+1];
+            }
+        }
+        numArr.pop([numArr.length-1]);
+        console.log(numArr);
+    }
+    checkErase(name);
+</script>
+</body>
+</html>

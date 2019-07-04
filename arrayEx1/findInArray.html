@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find in array</title>
+</head>
+<body>
+<script>
+    let num = prompt("Enter the total we want");
+    let numArr = [];
+    let numInput;
+
+    for (let i = 1; i <= num; i++) {
+        numInput = Number(prompt("Enter anything"));
+        numArr.push(numInput);
+    }
+
+    let name = prompt("Enter the star name");
+    compare(name);
+
+    function compare(name) {
+        let result;
+        for (i = 0; i < numArr.length; i++) {
+            if (name == numArr[i]) {
+                result = numArr[i];
+            }
+        }
+        if (result == undefined) {
+            alert(name + " is not in array")
+        } else {
+            alert(name + " is in array")
+        }
+    }
+
+</script>
+</body>
+</html>
